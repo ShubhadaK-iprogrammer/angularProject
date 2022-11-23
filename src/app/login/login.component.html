@@ -1,0 +1,43 @@
+<div class="bootstrap-wrapper">
+  <div class="container mt">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="container text-center">
+          <img
+            class="img-fluid"
+            width="100px"
+            src="https://img.freepik.com/premium-vector/female-user-profile-avatar-is-woman-character-screen-saver-with-emotions_505620-542.jpg?w=2000"
+            alt=""
+          />
+        </div>
+        <h2 class="text-center">Login Here..!!</h2>
+
+        <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+          <mat-form-field class="full-width ml-5" appearance="outline">
+            <mat-label>Username</mat-label>
+            <input
+            formControlName="username"
+            required=""
+             type="text" matInput />
+          </mat-form-field>
+
+          <mat-form-field class="full-width ml-5" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input             
+            formControlName="password"
+            required=""
+            type="password" matInput />
+          </mat-form-field>
+          <div class="container text-center">
+           <button type="submit" mat-raised-button color="primary">LogIn</button>
+           <button class="ml-5" type="reset" mat-raised-button color="accent">Reset</button>
+
+          </div>
+
+ 
+        </form>
+      <!-- <p class="ml-5">{{formData | json}}</p>   -->
+      </div>
+    </div>
+  </div>
+</div>
